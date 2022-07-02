@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1925340125613891735}
   - component: {fileID: -8514914497207103088}
   - component: {fileID: -6445377351454236628}
-  - component: {fileID: -8506788968389566558}
   m_Layer: 0
   m_Name: monster
   m_TagString: Monstr
@@ -126,16 +125,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e2cb5a5bbb21842a5b05c5151c0db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-8506788968389566558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4015837467978386153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b64c8d7ff3bf8d40a111e1bdd9225f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
