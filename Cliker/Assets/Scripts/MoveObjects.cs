@@ -3,24 +3,26 @@ using UnityEngine;
 
 public class MoveObjects : MonoBehaviour
 {
-    Rigidbody rb;
-
+    private Rigidbody rb;
+    [SerializeField] private float maxX, maxZ;
+    
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        StartCoroutine("Run");
+        StartCoroutine(Run());
     }
 
     IEnumerator Run()
     {
         while (true)
         {
-            
             float waitTime = Random.Range(0.2f, 0.3f);
-            float x = Random.Range(-7.5f, 7.5f);
-            float z = Random.Range(-4.5f, 4.5f);
-            Vector3 pos = new Vector3(z, 1f, x);
-            rb.AddForce(pos, ForceMode.Impulse);
+
+
+            var pos = Random.insideUnitCircle;
+            pos = new Vector2(pos.x * maxX, pos.y * maxZ);
+            rb.AddForce(new Vector3(pos.x, 1f, pos.y), ForceMode.Impulse);
             yield return new WaitForSeconds(waitTime);
         }
     }
